@@ -70,7 +70,6 @@ public class Estoque {
         String codigoProdutoInput = JOptionPane.showInputDialog("Qual código do produto do estoque que deseja modificar?");
         String acaoEscolhida = JOptionPane.showInputDialog("Você deseja adicionar(add) ou subtrair(sub) o estoque de produtos?");
 
-        // Validar o código do produto usando regex
         if (!ValidarCodigoProduto(codigoProdutoInput)) {
             JOptionPane.showMessageDialog(null, "Código do produto inválido. Deve ser um número inteiro positivo.");
             return;
@@ -78,7 +77,6 @@ public class Estoque {
 
         int produtoEscolhido = Integer.parseInt(codigoProdutoInput);
 
-        // Validar a ação escolhida usando regex
         if (!ValidarAcaoEscolhida(acaoEscolhida)) {
             JOptionPane.showMessageDialog(null, "Ação inválida. Digite 'add' ou 'sub'.");
             return;
